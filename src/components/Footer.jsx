@@ -76,17 +76,19 @@ export default function Footer() {
                             >
                                 Home
                             </NavLink>
-                            <NavLink 
-                                to="/about" 
-                                className='text-gray-600 text-md hover:text-gray-900'
-                            >
-                                About
-                            </NavLink>
+
                             <NavLink 
                                 to="/products" 
                                 className='text-gray-600 text-md hover:text-gray-900'
                             >
                                 Product
+                            </NavLink>
+                            
+                            <NavLink 
+                                to="/about" 
+                                className='text-gray-600 text-md hover:text-gray-900'
+                            >
+                                About
                             </NavLink>
                             
                         </div>
@@ -98,7 +100,7 @@ export default function Footer() {
                             </div>
                             <div className='flex items-center gap-2'>
                                 <MapPin size={18}/>
-                                <p className='text-sm'>Dasma, Cavite</p>
+                                <p className='text-sm'>Salawag, Dasmariñas City, Cavite</p>
                             </div>
                             <div className='flex items-center gap-2'>
                                 <Phone size={18}/>

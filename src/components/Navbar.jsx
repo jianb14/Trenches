@@ -26,18 +26,19 @@ function Navbar() {
             </NavLink>
 
             <NavLink 
+                to="/products" 
+                className={({ isActive }) => `text-gray-700 text-sm font-medium relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-black after:transition-all after:duration-300 hover:after:w-full hover:text-gray-900 ${isActive ? 'after:w-full text-gray-900' : 'after:w-0'}`}
+            >
+                Products
+            </NavLink>
+
+            <NavLink 
                 to="/about" 
                 className={({ isActive }) => `text-gray-700 text-sm font-medium relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-black after:transition-all after:duration-300 hover:after:w-full hover:text-gray-900 ${isActive ? 'after:w-full text-gray-900' : 'after:w-0'}`}
             >
                 About
             </NavLink>
 
-            <NavLink 
-                to="/products" 
-                className={({ isActive }) => `text-gray-700 text-sm font-medium relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-black after:transition-all after:duration-300 hover:after:w-full hover:text-gray-900 ${isActive ? 'after:w-full text-gray-900' : 'after:w-0'}`}
-            >
-                Products
-            </NavLink>
           </div>
         </div>  
 
