@@ -8,8 +8,8 @@ export default function TheTeam() {
 
             <FadeUp>
                 <section className='px-5 pt-20 pb-40 w-full md:px-8 lg:px-12'>
-                    <p className='text-xs sm:text-sm text-text-secondary uppercase mb-3'>Shop by Category</p>
-                    <h2 className='text-4xl font-serif font-medium sm:text-5xl md:text-6xl'>Find your fit.</h2>
+                    <p className='text-xs sm:text-sm text-text-secondary uppercase mb-3'>The Team</p>
+                    <h2 className='text-4xl font-serif font-medium sm:text-5xl md:text-6xl'>The people behind it.</h2>
 
                     <div className='mt-8 flex gap-8 flex-col sm:flex-row'>
                         <div>

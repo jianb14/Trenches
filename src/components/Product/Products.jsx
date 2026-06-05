@@ -62,180 +62,180 @@ export default function ShopPage() {
 
   return (
     <FadeUp>
-    <section className="px-5 py-12 w-full min-h-screen md:px-8 lg:px-12">
-      <p className="text-xs sm:text-sm text-text-secondary uppercase mb-3">
-        Shop Everything
-      </p>
+      <section className="px-5 py-12 w-full min-h-screen md:px-8 lg:px-12">
+        <p className="text-xs sm:text-sm text-text-secondary uppercase mb-3">
+          Shop Everything
+        </p>
 
-      <h2 className="text-4xl font-serif font-medium sm:text-5xl md:text-6xl mb-6 md:mb-10">
-        Every piece, in one place.
-      </h2>
+        <h2 className="text-4xl font-serif font-medium sm:text-5xl md:text-6xl mb-6 md:mb-10">
+          Every piece, in one place.
+        </h2>
 
-      {/* FILTER BAR */}
-      <div className="flex flex-wrap items-center justify-between gap-2 mb-7">
+        {/* FILTER BAR */}
+        <div className="flex flex-wrap items-center justify-between gap-2 mb-7">
 
-        {/* CATEGORY */}
-        <div className="flex gap-1.5 flex-wrap mb-3 md:mb-0">
-          {CATEGORIES.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveFilter(cat)}
-              className={[
-                "text-[11px] font-bold tracking-wider uppercase px-3.5 py-1.5 rounded-full border-[1.5px] transition-all duration-150 cursor-pointer",
-                activeFilter === cat
-                  ? "bg-neutral-900 text-white border-neutral-900"
-                  : "bg-transparent text-neutral-500 border-neutral-300 hover:border-neutral-500 hover:text-neutral-900",
-              ].join(" ")}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-
-        {/* SEARCH */}
-        <div className="flex gap-1.5 flex-col sm:flex-row flex-1 md:flex-none">
-          <div className="relative w-full md:w-70">
-            <svg
-              className="absolute left-2.5 top-1/2 -translate-y-1/2 text-neutral-500 size-4"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <circle cx="11" cy="11" r="7" />
-              <path d="M21 21l-4.35-4.35" />
-            </svg>
-
-            <input
-              type="text"
-              placeholder="Search..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="
-                pl-8 pr-3 py-2 text-sm
-                border-[1.5px] border-neutral-300
-                rounded-lg bg-white text-neutral-900 hover:border-neutral-500 
-                outline-none focus:border-neutral-900 w-full
-              "
-            />
+          {/* CATEGORY */}
+          <div className="flex gap-1.5 flex-wrap mb-3 md:mb-0">
+            {CATEGORIES.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveFilter(cat)}
+                className={[
+                  "text-[12px] font-medium tracking-wide px-4 py-1.5 rounded-full border-[1.5px] transition-all duration-150 cursor-pointer",
+                  activeFilter === cat
+                    ? "bg-neutral-900 text-white border-neutral-900"
+                    : "bg-transparent text-neutral-500 border-neutral-200 hover:border-neutral-400 hover:text-neutral-900",
+                ].join(" ")}
+              >
+                {cat}
+              </button>
+            ))}
           </div>
 
-          {/* SORT DROPDOWN (CUSTOM) */}
-          <div className="relative w-full md:w-44">
+          {/* SEARCH */}
+          <div className="flex gap-1.5 flex-col sm:flex-row flex-1 md:flex-none">
+            <div className="relative w-full md:w-70">
+              <svg
+                className="absolute left-2.5 top-1/2 -translate-y-1/2 text-neutral-500 size-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <circle cx="11" cy="11" r="7" />
+                <path d="M21 21l-4.35-4.35" />
+              </svg>
+
+              <input
+                type="text"
+                placeholder="Search..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                className="
+                  pl-9 pr-3 py-2 text-sm
+                  border-[1.5px] border-neutral-300
+                  rounded-lg bg-white text-neutral-900 hover:border-neutral-500 
+                  outline-none focus:border-neutral-900 w-full
+                "
+              />
+            </div>
+
+            {/* SORT DROPDOWN (CUSTOM) */}
+            <div className="relative w-full md:w-44">
+              <button
+                onClick={() => setOpenSort(!openSort)}
+                className="
+                  w-full flex items-center justify-between
+                  pl-4 py-2 pr-3
+                  bg-white
+                  border border-neutral-300
+                  rounded-lg
+                  text-sm text-neutral-800
+                  hover:border-neutral-500
+                  focus:border-neutral-900
+                  transition
+                "
+              >
+                <span>{selectedSort?.label}</span>
+                <ChevronDown size={16} 
+                  className={`
+                text-neutral-800
+                  transition-transform duration-200 ease-out
+                  ${openSort ? "rotate-180" : "rotate-0"}
+                `} />
+              </button>
+
+              {openSort && (
+                <>
+                  {/* click outside */}
+                  <div
+                    className="fixed inset-0"
+                    onClick={() => setOpenSort(false)}
+                  />
+
+                  <div
+                    className="
+                      absolute mt-2 w-full
+                      bg-white
+                      border border-neutral-300
+                      rounded-lg
+                      overflow-hidden
+                      py-1 pl-1 pr-1.5
+                      z-50
+                    "
+                  >
+                    {sortOptions.map((opt) => (
+                      <button
+                        key={opt.value}
+                        onClick={() => {
+                          setSort(opt.value);
+                          setOpenSort(false);
+                        }}
+                        className={`
+                          w-full text-left px-4 py-2 text-sm m-px 
+                          hover:bg-neutral-50 rounded hover:text-black
+                          transition
+                          ${
+                            sort === opt.value
+                              ? "bg-neutral-100 text-black"
+                              : "text-neutral-600"
+                          }
+                        `}
+                      >
+                        {opt.label}
+                      </button>
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* PRODUCTS */}
+        {filtered.length === 0 ? (
+          <div className="text-center pt-20 pb-30 flex flex-col items-center justify-center gap-3">
+    
+            {/* icon */}
+            <div className="mb-6"><PackageX size={100} /></div>
+
+            {/* text */}
+            <div>
+              <p className="text-lg font-semibold text-neutral-800">
+                No products found
+              </p>
+              <p className="text-sm text-text-secondary mt-2">
+                Try adjusting your search or filters
+              </p>
+            </div>
+
+            {/* reset button */}
             <button
-              onClick={() => setOpenSort(!openSort)}
+              onClick={() => {
+                setSearch("");
+                setActiveFilter("All");
+                setSort("featured");
+              }}
               className="
-                w-full flex items-center justify-between
-                pl-4 py-2 pr-3
-                bg-white
-                border border-neutral-300
+                mt-4 px-4 py-2 text-sm
+                bg-neutral-900 text-white
                 rounded-lg
-                text-sm text-neutral-800
-                hover:border-neutral-500
-                focus:border-neutral-900
+                hover:bg-neutral-800
                 transition
               "
             >
-              <span>{selectedSort?.label}</span>
-              <ChevronDown size={16} 
-                className={`
-              text-neutral-800
-                transition-transform duration-200 ease-out
-                ${openSort ? "rotate-180" : "rotate-0"}
-              `} />
+              Clear filters
             </button>
 
-            {openSort && (
-              <>
-                {/* click outside */}
-                <div
-                  className="fixed inset-0"
-                  onClick={() => setOpenSort(false)}
-                />
-
-                <div
-                  className="
-                    absolute mt-2 w-full
-                    bg-white
-                    border border-neutral-300
-                    rounded-lg
-                    overflow-hidden
-                    py-1 pl-1 pr-1.5
-                    z-50
-                  "
-                >
-                  {sortOptions.map((opt) => (
-                    <button
-                      key={opt.value}
-                      onClick={() => {
-                        setSort(opt.value);
-                        setOpenSort(false);
-                      }}
-                      className={`
-                        w-full text-left px-4 py-2 text-sm m-px 
-                        hover:bg-neutral-100 rounded hover:text-black
-                        transition
-                        ${
-                          sort === opt.value
-                            ? "bg-neutral-200 text-black"
-                            : "text-neutral-600"
-                        }
-                      `}
-                    >
-                      {opt.label}
-                    </button>
-                  ))}
-                </div>
-              </>
-            )}
           </div>
-        </div>
-      </div>
-
-      {/* PRODUCTS */}
-      {filtered.length === 0 ? (
-        <div className="text-center pt-20 pb-30 flex flex-col items-center justify-center gap-3">
-  
-          {/* icon */}
-          <div className="mb-6"><PackageX size={100} /></div>
-
-          {/* text */}
-          <div>
-            <p className="text-lg font-semibold text-neutral-800">
-              No products found
-            </p>
-            <p className="text-sm text-text-secondary mt-2">
-              Try adjusting your search or filters
-            </p>
+        ) : (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+            {filtered.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
           </div>
-
-          {/* reset button */}
-          <button
-            onClick={() => {
-              setSearch("");
-              setActiveFilter("All");
-              setSort("featured");
-            }}
-            className="
-              mt-4 px-4 py-2 text-sm
-              bg-neutral-900 text-white
-              rounded-lg
-              hover:bg-neutral-800
-              transition
-            "
-          >
-            Clear filters
-          </button>
-
-        </div>
-      ) : (
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-          {filtered.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
-      )}
-    </section>
+        )}
+      </section>
     </FadeUp>
   );
 }

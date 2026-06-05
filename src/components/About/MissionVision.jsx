@@ -24,7 +24,7 @@ export default function MissionVision() {
                         </p>
                     </div>
 
-                    <div className="py-10 px-8 sm:px-10 border rounded-xl bg-white border-gray-400">
+                    <div className="py-10 px-6 sm:px-10 border rounded-xl bg-white border-gray-400">
                         <p className="uppercase tracking-widest text-xs mb-6">
                         Vision
                         </p>
