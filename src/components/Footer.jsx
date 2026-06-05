@@ -40,31 +40,31 @@ export default function Footer() {
                                 to="/products" 
                                 className='text-gray-600 text-md hover:text-gray-900'
                             >
-                                T-Shirts
+                                T-Shirt
                             </NavLink>
                             <NavLink 
                                 to="/products" 
                                 className='text-gray-600 text-md hover:text-gray-900'
                             >
-                                Slippers
+                                Slipper
                             </NavLink>
                             <NavLink 
                                 to="/products" 
                                 className='text-gray-600 text-md hover:text-gray-900'
                             >
-                                Underwears
+                                Underwear
                             </NavLink>
                             <NavLink 
                                 to="/products" 
                                 className='text-gray-600 text-md hover:text-gray-900'
                             >
-                                Shorts
+                                Short
                             </NavLink>
                             <NavLink 
                                 to="/products" 
                                 className='text-gray-600 text-md hover:text-gray-900'
                             >
-                                Jerseys
+                                Jersey
                             </NavLink>
                         </div>
 
@@ -83,7 +83,7 @@ export default function Footer() {
                             >
                                 Product
                             </NavLink>
-                            
+
                             <NavLink 
                                 to="/about" 
                                 className='text-gray-600 text-md hover:text-gray-900'

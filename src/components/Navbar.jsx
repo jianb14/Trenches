@@ -95,21 +95,21 @@ function Navbar() {
           </NavLink>
 
           <NavLink
-              to="/about"
-              onClick={() => setIsMenuOpen(false)}
-              className={({ isActive }) => `flex items-center gap-3 px-3 py-3 rounded-md transition-colors ${isActive ? 'bg-neutral-100 text-black' : 'text-gray-700 hover:bg-gray-100 hover:text-black'}`}
-          >   
-              <Info size={18} />
-              <span>About</span>
-          </NavLink>
-
-          <NavLink
               to="/products"
               onClick={() => setIsMenuOpen(false)}
               className={({ isActive }) => `flex items-center gap-3 px-3 py-3 rounded-md transition-colors ${isActive ? 'bg-neutral-100 text-black' : 'text-gray-700 hover:bg-gray-100 hover:text-black'}`}
           >
               <ShoppingBag size={18}/>
               <span>Products</span>
+          </NavLink>
+
+          <NavLink
+              to="/about"
+              onClick={() => setIsMenuOpen(false)}
+              className={({ isActive }) => `flex items-center gap-3 px-3 py-3 rounded-md transition-colors ${isActive ? 'bg-neutral-100 text-black' : 'text-gray-700 hover:bg-gray-100 hover:text-black'}`}
+          >   
+              <Info size={18} />
+              <span>About</span>
           </NavLink>
         </div>
   
