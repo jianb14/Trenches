@@ -1,0 +1,18 @@
+@import "tailwindcss";  
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@theme {
+  /* Colors */ 
+  --color-primary: #111827;
+  --color-secondary: #ffffff;
+  --color-accent: #ff3b72;
+  --color-background: #F3F4F6;
+
+  --color-text-primary: #111827;
+  --color-text-secondary: #374151;
+
+  /* Font Families */ 
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Instrument Serif', sans-serif;
+}
+
