@@ -16,13 +16,13 @@ export default function Footer() {
                             <a href='https://www.facebook.com/share/1LG1Db5hJy/'>
                                 <FontAwesomeIcon
                                     icon={faFacebook}
-                                    className="text-xl text-neutral-900 py-1.5 px-1 border rounded-[50%] border-neutral-300 hover:bg-neutral-200"
+                                    className="text-xl text-neutral-900 py-1.5 px-1 border rounded-[50%] border-neutral-200 hover:bg-neutral-100"
                                 />
                             </a>
-                            <a href='https://www.instagram.com/trenchesfromthagroundup?igsh=MW55dmp4aW81c3EzMQ%3D%3D'>
+                            <a href='https://www.instagram.com/trenchesfromthagroundup'>
                                 <FontAwesomeIcon
                                     icon={faInstagram}
-                                    className="text-xl text-neutral-900 py-1.5 px-1 border rounded-[50%] border-neutral-300 hover:bg-neutral-200"
+                                    className="text-xl text-neutral-900 py-1.5 px-1 border rounded-[50%] border-neutral-200 hover:bg-neutral-100"
                                 />
                             </a>
                         </div>

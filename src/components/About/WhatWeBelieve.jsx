@@ -1,4 +1,5 @@
 import FadeUp from "../FadeUp.jsx";
+import aboutBG from "/src/assets/images/about-bg-1.jpg";
 
 export default function WhatWeBelieve() {
     return(
@@ -22,8 +23,8 @@ export default function WhatWeBelieve() {
                     </div>
 
                     <img 
-                        src="/src/assets/images/about-bg-1.jpg" 
-                        alt="Trenches"
+                        src={aboutBG}
+                        alt="Trenches Background"
                         className="h-auto w-full object-cover sm:h-150 brightness-70 hover:brightness-90 transition duration-300"
                     />
 

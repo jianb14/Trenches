@@ -1,4 +1,6 @@
 import FadeUp from "../FadeUp.jsx";
+import model1 from "/src/assets/images/model-1.jpg";
+import model2 from "/src/assets/images/model-2.jpg";
 
 export default function TheTeam() {
     return(
@@ -12,8 +14,8 @@ export default function TheTeam() {
                     <div className='mt-8 flex gap-8 flex-col sm:flex-row'>
                         <div>
                             <img 
-                                src='/src/assets/images/model-1.jpg' 
-                                alt="Trenches Tee"
+                                src={model1} 
+                                alt="Model 1"
                                 className="w-full h-80 object-cover mb-2 sm:h-100 brightness-80 hover:brightness-100 transition duration-300" 
                             />
 
@@ -25,8 +27,8 @@ export default function TheTeam() {
 
                         <div>
                             <img 
-                                src='/src/assets/images/model-2.jpg' 
-                                alt="Trenches Tee"
+                                src={model2}  
+                                alt="Model 2"
                                 className="w-full h-80 object-cover mb-2 sm:h-100 brightness-80 hover:brightness-100 transition duration-300" 
                             />
 

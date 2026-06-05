@@ -71,7 +71,7 @@ function Navbar() {
         {/* Drawer Header */}
         <div className="flex items-center justify-between px-5 py-4">
           <div className="flex items-center gap-1">
-            <img src="/src/assets/images/TrenchesLogo.png" alt="Trenches Logo" className="w-9 h-9" />
+            <img src={Logo} alt="Trenches Logo" className="w-9 h-9" />
             <h1 className="text-3xl font-serif font-bold italic text-gray-900">Trenches</h1>
           </div>
           <button

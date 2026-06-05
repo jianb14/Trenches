@@ -1,5 +1,6 @@
 import { Palette, Puzzle, Rocket } from "lucide-react"
 import FadeUp from "../FadeUp.jsx";
+import mockup from "/src/assets/images/trenches-mockup.png";
 
 export default function OurStudio() {
     return(
@@ -11,7 +12,7 @@ export default function OurStudio() {
                     <div className="max-w-7xl mx-auto grid lg:grid-cols-2 grid- gap-16 items-center">
                         <img 
                             className="order-2 lg:order-1 w-full h-auto md:h-120" 
-                            src="/src/assets/images/trenches-mockup.png" 
+                            src={mockup} 
                             alt="Trenches Mockup"
                         />
 
