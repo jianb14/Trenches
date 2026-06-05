@@ -2,6 +2,7 @@ import { useState } from "react";
 import ContactModal from "./ContactModal.jsx";
 import { Menu, Home, Info, ShoppingBag } from "lucide-react";
 import { NavLink } from 'react-router-dom'
+import Logo from "/src/assets/images/trenches-logo.png";
 
 function Navbar() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -11,7 +12,7 @@ function Navbar() {
     <>
       <nav className="py-3 pl-3 px-3 flex items-center sticky top-0 left-0 justify-between md:px-6 lg:px-10 bg-white z-100">
         <div className="flex items-center gap-1">
-          <img src="/src/assets/images/TrenchesLogo.png" alt="Trenches Logo" className="w-8 h-8 sm:w-10 sm:h-10" />
+          <img src={Logo} alt="Trenches Logo" className="w-8 h-8 sm:w-10 sm:h-10" />
           <h1 className="text-2xl sm:text-3xl font-serif font-bold italic text-gray-900">Trenches</h1>
         </div>
 
