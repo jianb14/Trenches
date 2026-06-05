@@ -1,26 +1,45 @@
 import { useState, useMemo } from "react";
 import { ChevronDown, PackageX } from "lucide-react";
 import FadeUp from "../FadeUp.jsx";
+import product1 from "/src/assets/images/trenches-tee-white.jpg";
+import product2 from "/src/assets/images/trenches-tee-black.jpg";
+import product3 from "/src/assets/images/jordan-hydro-13-gray-black.jpg";
+import product4 from "/src/assets/images/jordan-hydro-13-red-black.jpg";
+import product5 from "/src/assets/images/calvin-klein-boxers.jpg";
+import product6 from "/src/assets/images/jordan-jersey-blue.jpg";
+import product7 from "/src/assets/images/jordan-jersey-red.jpg";
+import product8 from "/src/assets/images/jordan-jersey-red-black.jpg";
+import product9 from "/src/assets/images/jordan-jersey-blue-black.jpg";
+import product10 from "/src/assets/images/jordan-jersey-white-blue.jpg";
+import product11 from "/src/assets/images/shaka-cargo-short-red.jpg";
+import product12 from "/src/assets/images/shaka-cargo-short-blue.jpg";
+import product13 from "/src/assets/images/jordan-hydro-13-black.jpg";
+import product14 from "/src/assets/images/jordan-hydro-13-red-white.jpg";
+import product15 from "/src/assets/images/jordan-hydro-13-blue.jpg";
+import product16 from "/src/assets/images/jordan-hydro-13-red-black.jpg";
+import product17 from "/src/assets/images/jordan-hydro-13-black-gray.jpg";
+import product18 from "/src/assets/images/jordan-hydro-13-blue-white.jpg";
+
 
 const PRODUCTS = [
-  { id: 1, name: "Trenches Tee – Pink White", category: "T-Shirt", price: 550, badge: "bestseller", image: "TrenchesTeeWhite"},
-  { id: 2, name: "Trenches Tee – Pink Black", category: "T-Shirt", price: 550, badge: "new", image: "TrenchesTeeBlack" },
-  { id: 3, name: "Jordan Hydro 13 – Gray Black", category: "Slipper", price: 950, badge: "bestseller", image: "JH13-GB" },
-  { id: 4, name: "Jordan Hydro 13 – Red Black", category: "Slipper", price: 950, badge: "bestseller", image: "jordan-hydro-13-RB" },
-  { id: 5, name: "Calvin Klein Boxer", category: "Underwear", price: 120, badge: null, image: "calvin-klein-boxers" },
-  { id: 6, name: "Jordan Jersey – Blue", category: "Jersey", price: 1000, badge: null, image: "jordan-jersey-blue" },
-  { id: 7, name: "Jordan Jersey – Red", category: "Jersey", price: 1000, badge: null, image: "jordan-jersey-red" },
-  { id: 8, name: "Jordan Jersey – Red Black", category: "Jersey", price: 1000, badge: null, image: "JJ-RB" },
-  { id: 9, name: "Jordan Jersey – Blue Black", category: "Jersey", price: 1000, badge: null, image: "jordan-jersey-blue-black" },
-  { id: 10, name: "Jordan Jersey – White Blue", category: "Jersey", price: 1000, badge: null, image: "jordan-jersey-white-blue" },
-  { id: 11, name: "Shaka Cargo Short - Red", category: "Short", price: 350, badge: null, image: "shaka-cargo-short-red" },
-  { id: 12, name: "Shaka Cargo Short - Blue", category: "Short", price: 350, badge: null, image: "shaka-cargo-short-blue" },
-  { id: 13, name: "Jordan Hydro 13 – Black", category: "Slipper", price: 950, badge: "bestseller", image: "jordan-hydro-13-black" },
-  { id: 14, name: "Jordan Hydro 13 – Red White", category: "Slipper", price: 950, badge: "bestseller", image: "jordan-hydro-13-red-white" },
-  { id: 15, name: "Jordan Hydro 13 – Blue", category: "Slipper", price: 950, badge: "bestseller", image: "jordan-hydro-13-blue" },
-  { id: 16, name: "Jordan Hydro 13 – Gray", category: "Slipper", price: 950, badge: "bestseller", image: "jordan-hydro-13-gray" },
-  { id: 17, name: "Jordan Hydro 13 – Black Gray", category: "Slipper", price: 950, badge: "bestseller", image: "jordan-hydro-13-black-gray" },
-  { id: 18, name: "Jordan Hydro 13 – White Blue", category: "Slipper", price: 950, badge: "bestseller", image: "jordan-hydro-13-blue-white" },
+  { id: 1, name: "Trenches Tee – Pink White", category: "T-Shirt", price: 550, badge: "bestseller", image: product1},
+  { id: 2, name: "Trenches Tee – Pink Black", category: "T-Shirt", price: 550, badge: "new", image: product2 },
+  { id: 3, name: "Jordan Hydro 13 – Gray Black", category: "Slipper", price: 950, badge: "bestseller", image: product3 },
+  { id: 4, name: "Jordan Hydro 13 – Red Black", category: "Slipper", price: 950, badge: "bestseller", image: product4 },
+  { id: 5, name: "Calvin Klein Boxer", category: "Underwear", price: 120, badge: null, image: product5 },
+  { id: 6, name: "Jordan Jersey – Blue", category: "Jersey", price: 1000, badge: null, image: product6 },
+  { id: 7, name: "Jordan Jersey – Red", category: "Jersey", price: 1000, badge: null, image: product7 },
+  { id: 8, name: "Jordan Jersey – Red Black", category: "Jersey", price: 1000, badge: null, image: product8 },
+  { id: 9, name: "Jordan Jersey – Blue Black", category: "Jersey", price: 1000, badge: null, image: product9 },
+  { id: 10, name: "Jordan Jersey – White Blue", category: "Jersey", price: 1000, badge: null, image: product10 },
+  { id: 11, name: "Shaka Cargo Short - Red", category: "Short", price: 350, badge: null, image: product11 },
+  { id: 12, name: "Shaka Cargo Short - Blue", category: "Short", price: 350, badge: null, image: product12 },
+  { id: 13, name: "Jordan Hydro 13 – Black", category: "Slipper", price: 950, badge: "bestseller", image: product13 },
+  { id: 14, name: "Jordan Hydro 13 – Red White", category: "Slipper", price: 950, badge: "bestseller", image: product14 },
+  { id: 15, name: "Jordan Hydro 13 – Blue", category: "Slipper", price: 950, badge: "bestseller", image: product15 },
+  { id: 16, name: "Jordan Hydro 13 – Gray", category: "Slipper", price: 950, badge: "bestseller", image: product16 },
+  { id: 17, name: "Jordan Hydro 13 – Black Gray", category: "Slipper", price: 950, badge: "bestseller", image: product17 },
+  { id: 18, name: "Jordan Hydro 13 – White Blue", category: "Slipper", price: 950, badge: "bestseller", image: product18 },
 ];
 
 const CATEGORIES = ["All", "T-Shirt", "Slipper", "Underwear", "Jersey", "Short"];
@@ -81,10 +100,10 @@ export default function ShopPage() {
                 key={cat}
                 onClick={() => setActiveFilter(cat)}
                 className={[
-                  "text-[12px] font-medium tracking-wide px-4 py-1.5 rounded-full border-[1.5px] transition-all duration-150 cursor-pointer",
+                  "text-[12px] font-medium tracking-wide px-4 py-1.5 rounded-full border transition-all duration-150 cursor-pointer",
                   activeFilter === cat
                     ? "bg-neutral-900 text-white border-neutral-900"
-                    : "bg-transparent text-neutral-500 border-neutral-200 hover:border-neutral-400 hover:text-neutral-900",
+                    : "bg-transparent text-neutral-500 border-neutral-300 hover:border-neutral-500 hover:text-neutral-900",
                 ].join(" ")}
               >
                 {cat}
@@ -113,9 +132,9 @@ export default function ShopPage() {
                 onChange={(e) => setSearch(e.target.value)}
                 className="
                   pl-9 pr-3 py-2 text-sm
-                  border-[1.5px] border-neutral-300
+                  border border-neutral-300
                   rounded-lg bg-white text-neutral-900 hover:border-neutral-500 
-                  outline-none focus:border-neutral-900 w-full
+                  outline-none focus:border-neutral-800 w-full
                 "
               />
             </div>
@@ -132,7 +151,7 @@ export default function ShopPage() {
                   rounded-lg
                   text-sm text-neutral-800
                   hover:border-neutral-500
-                  focus:border-neutral-900
+                  focus:border-neutral-800
                   transition
                 "
               >
@@ -194,7 +213,7 @@ export default function ShopPage() {
 
         {/* PRODUCTS */}
         {filtered.length === 0 ? (
-          <div className="text-center pt-20 pb-30 flex flex-col items-center justify-center gap-3">
+          <div className="text-center pt-30 pb-40 flex flex-col items-center justify-center gap-3">
     
             {/* icon */}
             <div className="mb-6"><PackageX size={100} /></div>
@@ -247,7 +266,7 @@ function ProductCard({ product }) {
 
       <div className="relative aspect-square bg-neutral-100 flex items-center justify-center">
         <img
-          src={`src/assets/images/${product.image}.jpg`}
+          src={product.image}
           alt={product.name}
           className="w-full h-50 object-cover mb-2 sm:h-70 lg:h-90 brightness-80 hover:brightness-100 transition duration-300"
           onError={(e) => {
