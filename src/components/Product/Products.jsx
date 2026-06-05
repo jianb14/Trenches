@@ -248,7 +248,7 @@ export default function ShopPage() {
 
           </div>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {filtered.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -268,7 +268,7 @@ function ProductCard({ product }) {
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-50 object-cover mb-2 sm:h-70 lg:h-90 brightness-80 hover:brightness-100 transition duration-300"
+          className="w-full h-60 object-cover mb-2 sm:h-70 lg:h-90 brightness-80 hover:brightness-100 transition duration-300"
           onError={(e) => {
             e.currentTarget.style.display = "none";
           }}

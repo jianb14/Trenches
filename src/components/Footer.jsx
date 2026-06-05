@@ -32,37 +32,37 @@ export default function Footer() {
                             <p className='text-xs text-gray-500 uppercase mb-3'>Product</p>
                             <NavLink 
                                 to="/products" 
-                                className='text-gray-500 text-md font-medium hover:text-gray-900'
+                                className='text-gray-600 text-md hover:text-gray-900'
                             >
                                 All Products
                             </NavLink>
                             <NavLink 
                                 to="/products" 
-                                className='text-gray-500 text-md font-medium hover:text-gray-900'
+                                className='text-gray-600 text-md hover:text-gray-900'
                             >
                                 T-Shirts
                             </NavLink>
                             <NavLink 
                                 to="/products" 
-                                className='text-gray-500 text-md font-medium hover:text-gray-900'
+                                className='text-gray-600 text-md hover:text-gray-900'
                             >
                                 Slippers
                             </NavLink>
                             <NavLink 
                                 to="/products" 
-                                className='text-gray-500 text-md font-medium hover:text-gray-900'
+                                className='text-gray-600 text-md hover:text-gray-900'
                             >
                                 Underwears
                             </NavLink>
                             <NavLink 
                                 to="/products" 
-                                className='text-gray-500 text-md font-medium hover:text-gray-900'
+                                className='text-gray-600 text-md hover:text-gray-900'
                             >
                                 Shorts
                             </NavLink>
                             <NavLink 
                                 to="/products" 
-                                className='text-gray-500 text-md font-medium hover:text-gray-900'
+                                className='text-gray-600 text-md hover:text-gray-900'
                             >
                                 Jerseys
                             </NavLink>
@@ -72,19 +72,19 @@ export default function Footer() {
                             <p className='text-xs text-gray-500 uppercase mb-3'>Quick Links</p>
                             <NavLink 
                                 to="/" 
-                                className='text-gray-500 text-md font-medium hover:text-gray-900'
+                                className='text-gray-600 text-md hover:text-gray-900'
                             >
                                 Home
                             </NavLink>
                             <NavLink 
                                 to="/about" 
-                                className='text-gray-500 text-md font-medium hover:text-gray-900'
+                                className='text-gray-600 text-md hover:text-gray-900'
                             >
                                 About
                             </NavLink>
                             <NavLink 
                                 to="/products" 
-                                className='text-gray-500 text-md font-medium hover:text-gray-900'
+                                className='text-gray-600 text-md hover:text-gray-900'
                             >
                                 Product
                             </NavLink>
