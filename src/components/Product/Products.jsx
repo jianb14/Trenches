@@ -268,7 +268,7 @@ function ProductCard({ product }) {
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-60 object-cover mb-2 sm:h-70 lg:h-90 brightness-80 hover:brightness-100 transition duration-300"
+          className="w-full h-60 object-cover sm:h-70 lg:h-90 brightness-80 hover:brightness-100 transition duration-300"
           onError={(e) => {
             e.currentTarget.style.display = "none";
           }}
@@ -287,7 +287,7 @@ function ProductCard({ product }) {
         )}
       </div>
 
-      <div className=''>
+      <div className='mt-2'>
         <div className='flex items-center justify-between'>
           <p className='text-xs uppercase text-text-secondary'>{product.category}</p>
           <p className='text-sm font-medium'>₱{product.price.toLocaleString()}</p>
