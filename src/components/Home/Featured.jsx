@@ -1,4 +1,8 @@
 import FadeUp from "../FadeUp.jsx";
+import featured1 from "/src/assets/images/trenches-tee-white.jpg";
+import featured2 from "/src/assets/images/trenches-tee-black.jpg";
+import featured3 from "/src/assets/images/jordan-hydro-13-gray-black.jpg";
+import featured4 from "/src/assets/images/jordan-jersey-red-black.jpg";
 
 export default function Featured() {
     return(
@@ -14,7 +18,7 @@ export default function Featured() {
                         <div className=''>
                             <div className='relative'>
                                 <img 
-                                    src='/src/assets/images/TrenchesTeeWhite.jpg' 
+                                    src={featured1}
                                     alt="Trenches Tee"
                                     className="w-full h-60 object-cover mb-2 sm:h-80 lg:h-100 brightness-80 hover:brightness-100 transition duration-300" 
                                 />
@@ -35,7 +39,7 @@ export default function Featured() {
                         <div className='g'>
                             <div className='relative'>
                                 <img 
-                                    src='/src/assets/images/TrenchesTeeBlack.jpg' 
+                                    src={featured2} 
                                     alt="Trenches Tee"
                                     className="w-full h-60 object-cover mb-2 sm:h-80 lg:h-100 brightness-70 hover:brightness-90 transition duration-300" 
                                 />
@@ -56,8 +60,8 @@ export default function Featured() {
                         <div className='g'>
                             <div className='relative'>
                                 <img 
-                                    src='/src/assets/images/JH13-GB.jpg' 
-                                    alt="Trenches Tee"
+                                    src={featured3} 
+                                    alt="Trenches Slipper"
                                     className="w-full h-60 object-cover mb-2 sm:h-80 lg:h-100 brightness-70 hover:brightness-90 transition duration-300" 
                                 />
                                 <div className='absolute md:text-sm md:px-3 md:py-0.75 top-2 left-2 bg-white text-black text-xs px-2 py-0.5 '>
@@ -77,8 +81,8 @@ export default function Featured() {
                         <div className=''>
                             <div className='relative'>
                                 <img 
-                                    src='/src/assets/images/JJ-RB.jpg' 
-                                    alt="Trenches Tee"
+                                    src={featured4} 
+                                    alt="Trenches Jersey"
                                     className="w-full h-60 object-cover mb-2 sm:h-80 lg:h-100 brightness-80 hover:brightness-100 transition duration-300" 
                                 />
                             </div>

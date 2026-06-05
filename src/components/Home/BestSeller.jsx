@@ -1,4 +1,8 @@
 import FadeUp from "../FadeUp.jsx";
+import bestSeller1 from "/src/assets/images/trenches-tee-white.jpg";
+import bestSeller2 from "/src/assets/images/trenches-tee-black.jpg";
+import bestSeller3 from "/src/assets/images/jordan-hydro-13-gray-black.jpg";
+import bestSeller4 from "/src/assets/images/jordan-hydro-13-red-black.jpg";
 
 export default function BestSeller(){
     return(
@@ -14,7 +18,7 @@ export default function BestSeller(){
                         <div className=''>
                             <div className='relative'>
                                 <img 
-                                    src='/src/assets/images/TrenchesTeeWhite.jpg' 
+                                    src={bestSeller1} 
                                     alt="Trenches Tee"
                                     className="w-full h-60 object-cover mb-2 sm:h-80 lg:h-90 brightness-80 hover:brightness-100 transition duration-300" 
                                 />
@@ -35,7 +39,7 @@ export default function BestSeller(){
                         <div className='g'>
                             <div className='relative'>
                                 <img 
-                                    src='/src/assets/images/TrenchesTeeBlack.jpg' 
+                                    src={bestSeller2} 
                                     alt="Trenches Tee"
                                     className="w-full h-60 object-cover mb-2 sm:h-80 lg:h-90 brightness-70 hover:brightness-90 transition duration-300" 
                                 />
@@ -56,8 +60,8 @@ export default function BestSeller(){
                         <div className='g'>
                             <div className='relative'>
                                 <img 
-                                    src='/src/assets/images/JH13-GB.jpg' 
-                                    alt="Trenches Tee"
+                                    src={bestSeller3}
+                                    alt="Trenches Slipper"
                                     className="w-full h-60 object-cover mb-2 sm:h-80 lg:h-90 brightness-70 hover:brightness-90 transition duration-300" 
                                 />
                                 <div className='absolute top-2 left-2 bg-white text-black text-xs px-2 py-0.5 '>
@@ -77,8 +81,8 @@ export default function BestSeller(){
                         <div className=''>
                             <div className='relative'>
                                 <img 
-                                    src='/src/assets/images/jordan-hydro-13-RB.jpg' 
-                                    alt="Trenches Tee"
+                                    src={bestSeller4}
+                                    alt="Trenches Slipper"
                                     className="w-full h-60 object-cover mb-2 sm:h-80 lg:h-90 brightness-80 hover:brightness-100 transition duration-300" 
                                 />
                                 <div className='absolute top-2 left-2 bg-white text-black text-xs px-2 py-0.5 '>

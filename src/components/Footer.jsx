@@ -19,7 +19,7 @@ export default function Footer() {
                                     className="text-xl text-neutral-900 py-1.5 px-1 border rounded-[50%] border-neutral-300 hover:bg-neutral-200"
                                 />
                             </a>
-                            <a href=''>
+                            <a href='https://www.instagram.com/trenchesfromthagroundup?igsh=MW55dmp4aW81c3EzMQ%3D%3D'>
                                 <FontAwesomeIcon
                                     icon={faInstagram}
                                     className="text-xl text-neutral-900 py-1.5 px-1 border rounded-[50%] border-neutral-300 hover:bg-neutral-200"

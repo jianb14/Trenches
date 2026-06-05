@@ -1,6 +1,10 @@
 import { ArrowRight } from "lucide-react"
 import { NavLink } from "react-router-dom"
 import FadeUp from "../FadeUp.jsx";
+import category1 from "/src/assets/images/trenches-tee-white.jpg";
+import category2 from "/src/assets/images/jordan-jersey-red-black.jpg";
+import category3 from "/src/assets/images/jordan-hydro-13-gray-black.jpg";
+import category4 from "/src/assets/images/shaka-cargo-short-blue.jpg";
 
 
 export default function ShopByCategory() {
@@ -15,7 +19,7 @@ export default function ShopByCategory() {
                         <div className='relative'>
                             <NavLink to="/products">
                                 <img 
-                                    src='/src/assets/images/TrenchesTeeWhite.jpg' 
+                                    src={category1} 
                                     alt="T-Shirts"
                                     className="w-full h-60 object-cover sm:h-80 lg:h-100 brightness-70 hover:brightness-90 transition duration-300" 
                                 />
@@ -30,7 +34,7 @@ export default function ShopByCategory() {
                         <div className='relative'>
                             <NavLink to="/products">
                                 <img 
-                                    src='/src/assets/images/JJ-RB.jpg' 
+                                    src={category2} 
                                     alt="Jerseys"
                                     className="w-full h-60 object-cover sm:h-80 lg:h-100 brightness-70 hover:brightness-90 transition duration-300" 
                                 />
@@ -45,7 +49,7 @@ export default function ShopByCategory() {
                         <div className='relative'>
                             <NavLink to="/products">
                                 <img 
-                                    src='/src/assets/images/JH13-GB.jpg' 
+                                    src={category3}
                                     alt="Slippers"
                                     className="w-full h-60 object-cover sm:h-80 lg:h-100 brightness-70 hover:brightness-90 transition duration-300" 
                                 />
@@ -60,8 +64,8 @@ export default function ShopByCategory() {
                         <div className='relative'>
                             <NavLink to="/products">
                                 <img 
-                                    src='/src/assets/images/shaka-cargo-short-blue.jpg' 
-                                    alt="T-Shirts"
+                                    src={category4} 
+                                    alt="Shorts"
                                     className="w-full h-60 object-cover sm:h-80 lg:h-100 brightness-70 hover:brightness-90 transition duration-300" 
                                 />
                                 <div className='flex items-center justify-between absolute bottom-5 left-2 right-2 px-3 py-0.75'>

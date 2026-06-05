@@ -1,4 +1,5 @@
 import FadeUp from "../FadeUp.jsx";
+import whyTrenchesBG from "/src/assets/images/trenches-bg-2.jpg";
 
 export default function WhyTrenches() {
     return(
@@ -32,7 +33,7 @@ export default function WhyTrenches() {
                         </div>
                     </div>
 
-                    <img src='/src/assets/images/trenches-bg-2.jpg' alt="Why Trenches" className='w-full h-80 object-cover mt-10 sm:h-120 lg:h-125 lg:mt-0 brightness-90 hover:brightness-100 transition duration-300'/>
+                    <img src={whyTrenchesBG} alt="Why Trenches Background" className='w-full h-80 object-cover mt-10 sm:h-120 lg:h-125 lg:mt-0 brightness-90 hover:brightness-100 transition duration-300'/>
                 
                 </section>
             </FadeUp>

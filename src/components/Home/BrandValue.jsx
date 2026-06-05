@@ -6,7 +6,7 @@ export default function BrandValue() {
         <>
 
             <FadeUp>
-                <section className="px-5 py-20 mt-20 bg-white md:px-8 lg:px-12 w-full border border-gray-300">
+                <section className="px-5 py-20 mt-20 bg-white md:px-8 lg:px-12 w-full border border-gray-200">
                     <div className="grid grid-cols-1 grid-rows-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
                         <div className="col-span-2 md:col-span-1 text-center">
                             <div className="text-3xl font-bold text-accent mb-5 h-12 w-12 bg-red-100 flex justify-center items-center rounded-[50%] mx-auto hover:bg-red-200">
