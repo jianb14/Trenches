@@ -3,6 +3,7 @@ import FadeUp from "../FadeUp.jsx";
 import { ArrowRight } from "lucide-react";
 import { RotateCcw } from "lucide-react";
 import { Truck } from "lucide-react";
+import heroImage from "/src/assets/images/hero-bg.jpg";
 
 function Hero() {
     return (
@@ -70,7 +71,7 @@ function Hero() {
                 <div>
                     <div className="relative">
                         <img 
-                            src="/src/assets/images/hero-bg.jpg" 
+                            src={heroImage}
                             alt="Hero Image" 
                             className="h-100 sm:h-120 md:h-130 w-full md:w-180 object-cover rounded-xl md:rounded-none" 
                         />
